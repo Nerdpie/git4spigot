@@ -29,6 +29,7 @@ $RECYCLE.BIN/
 *.bak
 
 ### Linux template
+# temporary (need to research)
 *~
 
 # temporary files which can be created if a process still has a handle open of a deleted file
@@ -121,8 +122,6 @@ buildNumber.properties
 *.bz2
 *.xz
 *.lzma
-*.cab
-
 # Packing-only formats
 *.iso
 *.tar
@@ -134,9 +133,6 @@ buildNumber.properties
 *.egg
 *.deb
 *.rpm
-*.msi
-*.msm
-*.msp
 
 ### Vim template
 # Swap
@@ -150,7 +146,6 @@ Session.vim
 
 # Temporary
 .netrwhist
-*~
 # Auto-generated tag files
 tags
 
@@ -168,13 +163,9 @@ tags
 .mtj.tmp/
 
 # Package Files #
-*.jar
 *.war
 *.ear
-*.zip
 *.tar.gz
-*.rar
-
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 
