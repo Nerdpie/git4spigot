@@ -1,5 +1,7 @@
 package io.github.nerdpie.git4spigot;
 
+import org.bukkit.Bukkit;
+import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.eclipse.jgit.api.Git;
 import org.eclipse.jgit.api.errors.GitAPIException;
@@ -38,6 +40,16 @@ public class git4spigot extends JavaPlugin {
      * TODO Create a template for Spigot plugin projects
      * TODO Decide if we want to use the Spigot "plugin annotations" tool
      *
+     * General git workflow:
+     * Ensure that we have a repo (init if necessary)
+     * Ensure that we have a .gitignore set up (copy from a template in our config; any subsequent changes will require FTP/shell access)
+     * Ensure that there's at least one commit (simple avoidance of issues)
+     * Ensure that we have a remote set up (this may be optional, e.g. if a user is hosting their own server)
+     * FIXME Review the workflow for pushing to a remote, esp. how we make sure that we're in sync w/o clobbering
+     *      This task will be tricky, as we want all management on the MC server to be very straightforward;
+     *      users won't have access to resolve merge conflicts in many cases.
+     *
+     *
      */ //End Planning
 
     // TODO This will be set from the configs, allowing server owners to version different scopes and adjust for host nuances
@@ -74,6 +86,10 @@ public class git4spigot extends JavaPlugin {
     }
 
     private void gatherPluginMeta() {
+        //FIXME This should be in its own class
+        PluginManager manager = Bukkit.getPluginManager();
+
+        //TODO Determine what data we want to record about the installed plugins
 
     }
 
